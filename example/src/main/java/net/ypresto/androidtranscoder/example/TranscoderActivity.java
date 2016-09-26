@@ -113,7 +113,7 @@ public class TranscoderActivity extends Activity {
                     };
                     Log.d(TAG, "transcoding into " + file);
                     mFuture = MediaTranscoder.getInstance().transcodeVideo(fileDescriptor, file.getAbsolutePath(),
-                            MediaFormatStrategyPresets.createAndroid720pStrategy(8000 * 1000, 128 * 1000, 1), new MediaTrimTime(5 * 1000000, 10 * 1000000), listener);
+                            MediaFormatStrategyPresets.createAndroid720pStrategy(), new MediaTrimTime(5 * 1000000, 10 * 1000000), listener);
                     switchButtonEnabled(true);
                 }
                 break;
